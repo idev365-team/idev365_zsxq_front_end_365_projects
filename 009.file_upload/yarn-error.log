@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/colin3dmax/.nvm/versions/node/v10.15.0/bin/node /Users/colin3dmax/.yarn/bin/yarn.js init
+
+PATH: 
+  /Users/colin3dmax/.nvm/versions/node/v10.15.0/bin:/Users/colin3dmax/anaconda2/bin:/Users/colin3dmax/anaconda3/bin:/usr/local/Cellar/ctags/5.8/bin:/opt/local/bin:/opt/local/sbin:/Users/colin3dmax/Library/Application Support/GoodSync:/Users/colin3dmax/Work/android-sdk/build-tools/android-4.4:/opt/local/bin:/opt/local/sbin:/usr/local/ant/bin:/Users/colin3dmax/Downloads/cocos2d-js-v3.2/tools/cocos2d-console/bin:/Users/colin3dmax/.rvm/gems/ruby-2.2.4/bin:/Users/colin3dmax/.rvm/gems/ruby-2.2.4@global/bin:/Users/colin3dmax/.rvm/rubies/ruby-2.2.4/bin:/Users/colin3dmax/bin/Sencha/Cmd/4.0.2.67:/Users/colin3dmax/bin:usr/local/bin:/Users/colin3dmax/java_software/apache-maven-3.6.0/bin:/Users/colin3dmax/mongodb-osx-x86_64-4.0.6/bin:/Users/colin3dmax/.deno/bin:/Users/colin3dmax/.yarn/bin:/Users/colin3dmax/.config/yarn/global/node_modules/.bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/mysql/bin:/usr/texbin:/usr/local/go/bin:/opt/X11/bin:/Users/colin3dmax/Work/android-sdk/platform-tools:/Users/colin3dmax/Work/android-ndk-r9c:/usr/local/ant/bin:/Applications/Araxis Merge.app/Contents/Utilities:/Applications/Araxis Merge.app/Contents/Utilities:/Users/colin3dmax/.rvm/bin:/Users/colin/Work/open_source/depot_tools
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.15.0
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/colin3dmax/.yarn/lib/cli.js:125657:13)
+      at Interface.emit (events.js:182:13)
+      at Interface._ttyWrite (readline.js:783:16)
+      at ReadStream.onkeypress (readline.js:168:10)
+      at ReadStream.emit (events.js:182:13)
+      at emitKeys (internal/readline.js:424:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1022:36)
+      at ReadStream.emit (events.js:182:13)
+      at addChunk (_stream_readable.js:283:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
