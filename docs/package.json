@@ -1,0 +1,10 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "docs:build":"vuepress build",
+    "docs:dev":"vuepress dev"
+  },
+  "license": "MIT"
+}
