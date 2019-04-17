@@ -5,13 +5,24 @@
   <title>Vue+Element演示代码</title>
   <!-- import CSS -->
   <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    .app{
+      padding:30px;
+    }
+  </style>
 </head>
 <body>
   <div id="app">
-    <el-button @click="visible = true">Button</el-button>
-    <el-dialog :visible.sync="visible" title="Hello world">
-      <p>Try Element</p>
-    </el-dialog>
+    <el-upload
+      class="upload-demo"
+      action="/upload"
+      :on-preview="handlePreview"
+      :on-remove="handleRemove"
+      :file-list="fileList"
+      list-type="picture">
+      <el-button size="small" type="primary">点击上传</el-button>
+      <div slot="tip" class="el-upload__tip">请上传你的文件</div>
+    </el-upload>
   </div>
 </body>
   <!-- import Vue before Element -->
@@ -19,10 +30,23 @@
   <!-- import JavaScript -->
   <script src="https://unpkg.com/element-ui/lib/index.js"></script>
   <script>
+
     new Vue({
       el: '#app',
-      data: function() {
-        return { visible: false }
+      data() {
+        return {
+          fileList: [
+            
+          ]
+        };
+      },
+      methods: {
+        handleRemove(file, fileList) {
+          console.log(file, fileList);
+        },
+        handlePreview(file) {
+          console.log(file);
+        }
       }
     })
   </script>
