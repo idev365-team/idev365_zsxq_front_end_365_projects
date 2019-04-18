@@ -1,16 +1,10 @@
 # 第009期.文件上传组件
 
-### 原生上传组件
+#### 示例1.原生上传组件
 
 demo_upload_01
 
-#### 如何启动
+#### 示例2.Vue+Element的upload组件上传
 
-```sh
-cd demo_upload_01
-npm install
-npm start
-```
-
-启动浏览器，访问<http://localhost:3000/>
+demo_upload_elment_ui_02
 
