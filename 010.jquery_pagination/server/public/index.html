@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Vue+Element演示代码</title>
+  <!-- import CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style>
+    #app{
+      padding:30px;
+    }
+    .pagination{
+      margin:10px 0;
+    }
+    .btn-jump{
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <a class="el-button btn-jump" href="/jquery/index.html">前往JQuery版——分页实现</a>
+    <el-table :data="orders" border style="width: 100%">
+        <el-table-column  prop="id" label="单号"></el-table-column>
+        <el-table-column prop="name" label="名称"></el-table-column>
+    </el-table>
+    <el-pagination
+      background
+      class="pagination"
+      :page-size="pageSize"
+      :total="total"
+      @current-change="handleChangePageInfo"
+    >
+    </el-pagination>
+  </div>
+</body>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+  <script>
+
+    new Vue({
+      el: '#app',
+      data() {
+        return {
+          orders: [],
+          currentPage: 0,
+          pageSize: 5,
+          total: 0,
+        };
+      },
+      created(){
+        this.fetchOrders(0);
+      },
+      methods: {
+        fetchOrders(currentPage=0){
+          fetch("/orders/"+this.pageSize+"/"+currentPage)
+            .then((res)=>{
+              return res.json();
+            }).then((res)=>{
+              console.log(res.data);
+              this.orders = res.data.orders;
+              this.currentPage = res.data.currentPage;
+              this.total = res.data.total;
+            });
+        },
+        handleChangePageInfo(pageNumber){
+          this.fetchOrders(pageNumber-1);
+        }
+      }
+    })
+  </script>
+</html>
